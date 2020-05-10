@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="renderer" content="webkit">
+	<meta name="description" content="这里收集日常碰到的各类demo">
+	<meta name="keys" content="好记么,好记,好记的博客,小茗同学,个人网站,官网,官方网站,博客,个人博客,柳夏南,demo,js,css3,html5,java,android">
+	<link rel="shortcut icon" href="http://haoji.me/favicon.ico" type="image/x-icon">
+	<title>各种Demo集合-好记么</title>
+	<style type="text/css">
+
+
+html, body{width: 100%; height: 100%;}
+body {
+	font-family: 'Microsoft Yahei';
+	font-size: 16px;
+	background: #ebebeb;
+	margin: 0;
+	padding: 0;
+}
+header {
+	height: 50px;
+	line-height: 50px;
+	background-color: #007FC0;
+	color: white;
+	padding: 0px 16px;
+	font-size: 16px;
+	box-shadow: 1px 1px 10px rgb(0, 0, 0);
+}
+header > ul {
+	margin: 0;
+	padding: 0;
+	display: inline-block;
+	margin-left: 25px;
+}
+header > ul > li {
+	display: inline-block;
+	margin: 0 6px;
+}
+header a {
+	color: white;
+	text-decoration: none;
+}
+header a:hover {
+	text-decoration: underline;
+	color: #9EDFFF;
+}
+footer {
+	height: 40px;
+	width: 100%;
+	text-align: center;
+	background-color: rgba(0, 0, 0, 0.67);
+	color: #FFF;
+	line-height: 40px;
+	font-size: 16px;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+footer a{color: white; text-decoration: none;}
+footer a:hover{text-decoration: underline;}
+.center-btn-wrapper {
+	width: 100%;
+	position: absolute;
+	top: 50%;
+	text-align: center;
+	font-size: 24px;
+	transform: translateY(-50%);
+}
+.center-btn-wrapper a {
+	color: white;
+	text-decoration: none;
+	text-shadow: none;
+	background-color: #287DA6;
+	padding: 12px 30px;
+	border-radius: 5px;
+}
+.center-btn-wrapper a:hover {
+	background-color: #14516F;
+}
+/* 暂时隐藏CNZZ统计按钮 */
+span.cnzz-wrapper {
+	display: none;
+}
+
+section.center-content {
+	max-width: 1200px;
+	min-height: 70%;
+	margin: 20px auto;
+	background: white;
+	padding: 20px;
+}
+.center-content ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	color: #FF2B09;
+}
+.center-content a {
+	color: #337ab7;
+	text-decoration: none;
+	margin-left: 10px;
+}
+.center-content a:hover {
+	text-decoration: underline;
+}
+.center-content ul li span {
+    color: #939393;
+    margin-left: 10px;
+}
+	</style>
+</head>
+<body>
+	<header>
+		<span><a href="http://haoji.me">好记么</a></span>
+		<ul>
+			<li><a href="http://blog.haoji.me">博客</a></li>
+			<li><a href="https://github.com/sxei">github</a></li>
+			<li><a href="http://haoji.me/msgboard.html">留言</a></li>
+			<li><a href="http://about.haoji.me">关于</a></li>
+		</ul>
+	</header>
+	<script type="text/javascript" src="index.js"></script>
+	<section class="center-content">
+		<h1>demo列表1</h1>
+		<ul>
+			<li>(2016-09-19)<a href="http://demo.haoji.me/notebook/" target="_blank">从网友@iRuxu 复制的非常全的web笔记</a></li>
+			<li>(2016-09-27)<a href="http://demo.haoji.me/pinyinjs/" target="_blank">JS在线汉字与拼音互转示例，JS实现简单的仿搜狗拼音输入法(不支持多音字自动识别)</a></li>
+			<li>(2016-09-27)<a href="http://demo.haoji.me/pinyinjs/polyphone.html" target="_blank">JS在线汉字与拼音互转示例(支持多音字自动识别)</a></li>
+		</ul>
+		<h1>demo列表2</h1>
+		<ul>
+			<script type="text/javascript">
+			for(var i=0; i<pages.length; i++)
+			{
+				var p = pages[i];
+				document.write('<li>('+p.date+')<a href="'+p.url+'" target="_blank">'+p.title+'</a><span>('+p.description+')</span></li>');
+			}
+			</script>
+		</ul>
+	</section>
+	<footer>
+		<span>© 2016-2020 <a href="http://haoji.me" target="_blank">haoji.me</a></span> 
+		<a href="http://www.miitbeian.gov.cn" target="_blank">粤ICP备16002604号-1</a> 
+		<a href="http://liuxianan.com/link.html">友情链接</a> 
+		<span class="cnzz-wrapper">
+			<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1257135263'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1257135263' type='text/javascript'%3E%3C/script%3E"));</script>
+		</span>
+	</footer>
+</body>
+</html>

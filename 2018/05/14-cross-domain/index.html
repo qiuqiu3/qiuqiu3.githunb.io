@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-cn"><head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta charset="utf-8">
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="renderer" content="webkit">
+	<meta name="keys" content="柳夏南,liuxianan,小茗同学,个人网站,官网,官方网站,博客,个人博客,it,web,前端,码农,程序员,js,css3,html5,java,android">
+	<link rel="shortcut icon" href="http://liuxianan.com/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="../../../res/lib/bootstrap/3.3.1/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../../../res/lib/font-awesome/4.2.0/css/font-awesome.css">
+	<link rel="stylesheet" type="text/css" href="../../../res/css/demo.css">
+	
+	<title>前端跨域总结</title>
+	<meta name="description" content="前端常见的跨域示例">
+	<style type="text/css">
+
+	</style>
+</head>
+<body>
+	<nav class="navbar navbar-default navbar-static-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#top_navbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="http://liuxianan.com">DEMO-柳夏南的个人网站</a>
+			</div>
+			<div class="collapse navbar-collapse" id="top_navbar">
+				<ul class="nav navbar-nav">
+					<li class="dropdown">
+						<a href="http://demo.liuxianan.com">首页</a>
+					</li>
+					<li class="dropdown">
+						<a href="http://blog.liuxianan.com">博客</a>
+					</li>
+					<li class="dropdown">
+						<a href="http://tool.liuxianan.com">工具</a>
+					</li>
+					<li class="dropdown">
+						<a href="https://github.com/liuxianan/liuxianan.github.io" target="_blank">本站源码</a>
+					</li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#">返回相关博文</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<div class="container">
+		<h2 id="page_title">前端跨域总结</h2>
+		<h3>window.name + iframe 跨域演示</h3>
+		<div class="row">
+			<div class="col-sm-12">
+				<a href="javascript:crossDomainByWindowName()" class="btn btn-primary">跨域请求</a>
+			</div>
+		</div>
+	</div>
+	
+
+	<script type="text/javascript" src="../../../res/lib/jquery/2.1.1/jquery.min.js"></script>
+	<script type="text/javascript" src="../../../res/js/demo.js"></script>
+	<script type="text/javascript">
+		function crossDomainByWindowName() {
+			var iframe = document.createElement('iframe');
+			iframe.src = 'http://test.haoji.me/window-name-cross-domain-proxy.html';
+			iframe.style.display = 'none'; // 隐藏
+			document.body.appendChild(iframe);
+			var count = 0;
+			iframe.onload = function() {
+				if(count == 0) {
+					iframe.src = 'http://demo.haoji.me/2018/05/14-cross-domain/empty.html';
+				} else {
+					console.log(iframe.contentWindow.name);
+					alert('跨域拿到数据：' + iframe.contentWindow.name)
+					document.body.removeChild(iframe);
+				}
+				count++;
+			};
+		}
+	</script>
+
+
+</body></html>
